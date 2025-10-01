@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Floating Spaceship</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Tailwind CSS for modern UI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tone.js for audio synthesis -->
+    <script src="https://cdn.jsdelivr.net/npm/tone@14.7.58/build/Tone.min.js"></script>
+    
+</head>
+<body>
+
+<div id="game-container">
+    <canvas id="gameCanvas"></canvas>
+    
+    <!-- Home Screen UI -->
+    <div id="home-panel" class="ui-panel">
+        <h1 class="title-text">Floating Spaceship</h1>
+        <p class="text-xl mt-4">High Score: <span id="highScoreDisplay">0</span></p>
+        <button id="startButton" class="action-button mt-6">Start Game</button>
+    </div>
+
+    <!-- Game Over UI -->
+    <div id="gameOver-panel" class="ui-panel hidden">
+        <h1 class="game-over-text">GAME OVER</h1>
+        <p class="text-xl mt-4">Score: <span id="finalScore">0</span></p>
+        <p class="text-lg mt-2 text-white">High Score: <span id="gameOverHighScore">0</span></p>
+        <button id="replayButton" class="action-button mt-6">Replay</button>
+    </div>
+    
+    <!-- Pause UI -->
+    <div id="pause-panel" class="ui-panel hidden">
+        <h1 class="pause-text">PAUSED</h1>
+        <button id="resumeButton" class="action-button mt-6">Resume</button>
+    </div>
+    
+    <!-- In-Game UI -->
+    <div class="score-display">Score: <span id="currentScore">0</span></div>
+    <button id="pauseButton" class="pause-button hidden">Pause</button>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
